@@ -251,7 +251,14 @@ def generator_view(request):
             if 200 <= response.status_code < 300:
                 return render(request, 'waiting.html', {'filename':filename, 'uuid':myuuid, 'status':"Starting generator...please wait", 'platform':platform})
             else:
-                return JsonResponse({"error": "Something went wrong"})
+                if _settings.DEBUG_API_RESPONSE:
+                    return JsonResponse({
+                        "error": "Something went wrong",
+                        "status_code": response.status_code,
+                        "response_text": response.text
+                    })
+                else:
+                    return JsonResponse({"error": "Something went wrong"})
     else:
         form = GenerateForm()
     #return render(request, 'maintenance.html')
