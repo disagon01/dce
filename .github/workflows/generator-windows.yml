@@ -140,7 +140,7 @@ jobs:
           url: ${{ env.STATUS_URL }}
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"uuid": "${{ inputs.uuid }}", "status": "5% 已完成"}'
+          data: '{"uuid": "${{ inputs.uuid }}", "status": "5% 已完成，坐和放宽"}'
 
       - name: Checkout source code
         if: ${{ env.VERSION != 'master' }}
@@ -287,7 +287,7 @@ jobs:
           url: ${{ env.STATUS_URL }}
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"uuid": "${{ inputs.uuid }}", "status": "10% 已完成"}'
+          data: '{"uuid": "${{ inputs.uuid }}", "status": "10% 已完成，坐和放宽"}'
 
       - name: Install flutter
         uses: subosito/flutter-action@v2.12.0 #https://github.com/subosito/flutter-action/issues/277
@@ -325,7 +325,7 @@ jobs:
           url: ${{ env.STATUS_URL }}
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"uuid": "${{ inputs.uuid }}", "status": "15% 已完成"}'
+          data: '{"uuid": "${{ inputs.uuid }}", "status": "15% 已完成，坐和放宽"}'
 
       - uses: Swatinem/rust-cache@v2
         with:
@@ -338,7 +338,7 @@ jobs:
           url: ${{ env.STATUS_URL }}
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"uuid": "${{ inputs.uuid }}", "status": "20% 已完成"}'
+          data: '{"uuid": "${{ inputs.uuid }}", "status": "20% 已完成，坐和放宽"}'
 
       - name: Setup vcpkg with Github Actions binary cache
         uses: lukka/run-vcpkg@v11
@@ -444,7 +444,7 @@ jobs:
           url: ${{ env.STATUS_URL }}
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"uuid": "${{ inputs.uuid }}", "status": "25% 已完成"}'
+          data: '{"uuid": "${{ inputs.uuid }}", "status": "25% 已完成，坐和放宽"}'
 
       - name: replace flutter icons
         if: ${{ inputs.iconlink != 'false' }}
@@ -463,7 +463,7 @@ jobs:
           url: ${{ env.STATUS_URL }}
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"uuid": "${{ inputs.uuid }}", "status": "50% 已完成，本步骤约需 5 分钟，请耐心等待"}'
+          data: '{"uuid": "${{ inputs.uuid }}", "status": "50% 已完成，本步骤约需 5 分钟，坐和放宽"}'
 
       - name: Build rustdesk
         run: |
@@ -548,7 +548,7 @@ jobs:
           url: ${{ env.STATUS_URL }}
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"uuid": "${{ inputs.uuid }}", "status": "70% 已完成，本步骤约需 5 分钟，请耐心等待"}'
+          data: '{"uuid": "${{ inputs.uuid }}", "status": "70% 已完成，本步骤约需 5 分钟，坐和放宽"}'
       
       - name: zip dlls
         continue-on-error: true
@@ -620,7 +620,7 @@ jobs:
           url: ${{ env.STATUS_URL }}
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"uuid": "${{ inputs.uuid }}", "status": "85% 已完成"}'
+          data: '{"uuid": "${{ inputs.uuid }}", "status": "85% 已完成，坐和放宽"}'
 
       - name: zip exe and msi
         continue-on-error: true

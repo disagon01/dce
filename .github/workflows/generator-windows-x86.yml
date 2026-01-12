@@ -129,7 +129,7 @@ jobs:
           url: ${{ env.STATUS_URL }}
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"uuid": "${{ inputs.uuid }}", "status": "5% 已完成"}'
+          data: '{"uuid": "${{ inputs.uuid }}", "status": "5% 已完成，坐和放宽"}'
 
       - name: Checkout source code
         if: ${{ env.VERSION != 'master' }}
@@ -245,7 +245,7 @@ jobs:
           url: ${{ env.STATUS_URL }}
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"uuid": "${{ inputs.uuid }}", "status": "10% 已完成"}'
+          data: '{"uuid": "${{ inputs.uuid }}", "status": "10% 已完成，坐和放宽"}'
 
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@v1
@@ -265,7 +265,7 @@ jobs:
           url: ${{ env.STATUS_URL }}
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"uuid": "${{ inputs.uuid }}", "status": "20% 已完成"}'
+          data: '{"uuid": "${{ inputs.uuid }}", "status": "20% 已完成，坐和放宽"}'
 
       - name: Setup vcpkg with Github Actions binary cache
         uses: lukka/run-vcpkg@v11
@@ -352,7 +352,7 @@ jobs:
           url: ${{ env.STATUS_URL }}
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"uuid": "${{ inputs.uuid }}", "status": "50% 已完成，本步骤约需 5 分钟，请耐心等待"}'
+          data: '{"uuid": "${{ inputs.uuid }}", "status": "50% 已完成，本步骤约需 5 分钟，坐和放宽"}'
 
       - name: Build rustdesk
         id: build
@@ -397,7 +397,7 @@ jobs:
           url: ${{ env.STATUS_URL }}
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"uuid": "${{ inputs.uuid }}", "status": "70% 已完成，本步骤约需 5 分钟，请耐心等待"}'
+          data: '{"uuid": "${{ inputs.uuid }}", "status": "70% 已完成，本步骤约需 5 分钟，坐和放宽"}'
       
       - name: zip dlls
         continue-on-error: true
@@ -451,7 +451,7 @@ jobs:
           url: ${{ env.STATUS_URL }}
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"uuid": "${{ inputs.uuid }}", "status": "85% 已完成"}'
+          data: '{"uuid": "${{ inputs.uuid }}", "status": "85% 已完成，坐和放宽"}'
 
       - name: zip exe
         continue-on-error: true

@@ -345,7 +345,7 @@
         <div class="container">
             <div class="section">
                 <h2><i class="fas fa-lock"></i> 权限</h2>
-                    以下权限可设为“默认”（用户可修改）或“固化”（用户不可更改）。<br>
+                    以下权限可设为“默认权限”（用户可修改）或“固化权限”（用户不可更改）。<br>
                     {{ form.permissionsDorO }}
                     <label for="{{ form.permissionsType.id_for_label }}">权限预设:</label>
                     {{ form.permissionsType }}<br><br>
@@ -372,7 +372,7 @@
             <div class="section">
                 <h2><i class="fas fa-cog"></i> 其他</h2>
                     <label for="{{ form.removeWallpaper.id_for_label }}">{{ form.removeWallpaper }} 在传入会话期间移除壁纸</label><br>
-                    <a href="https://rustdesk.com/docs/en/self-host/client-configuration/advanced-settings/">点击此处查看 Default/Override 设置列表</a>
+                    <a href="https://rustdesk.com/docs/en/self-host/client-configuration/advanced-settings/">点击此处查看 默认/固化 设置列表</a>
                     <label for="{{ form.defaultManual.id_for_label }}">默认设置（用户可修改）</label><br>
                     {{ form.defaultManual }}<br><br>
                     <label for="{{ form.overrideManual.id_for_label }}">固化设置（用户不可修改）</label><br>

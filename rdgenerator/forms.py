@@ -56,7 +56,7 @@ class GenerateForm(forms.Form):
     autoClose = forms.BooleanField(initial=False, required=False)
 
     #Permissions
-    permissionsDorO = forms.ChoiceField(choices=[('default', '默认权限'),('override', '强制覆盖权限')], initial='default')
+    permissionsDorO = forms.ChoiceField(choices=[('default', '默认权限'),('override', '固化权限')], initial='default')
     permissionsType = forms.ChoiceField(choices=[('custom', '自定义权限'),('full', '完全控制'),('view','仅屏幕共享')], initial='custom')
     enableKeyboard =  forms.BooleanField(initial=True, required=False)
     enableClipboard = forms.BooleanField(initial=True, required=False)
