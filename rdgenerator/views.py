@@ -307,7 +307,7 @@ def get_png(request):
 def create_github_run(myuuid):
     new_github_run = GithubRun(
         uuid=myuuid,
-        status="Starting generator...please wait"
+        status="正在启动生成器……请稍候"
     )
     new_github_run.save()
 
